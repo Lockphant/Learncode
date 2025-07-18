@@ -14,7 +14,7 @@ int main()
     
     InitWindow(width,hight,"Tom's Window"); // creates window width,hight,name
 
-    while (WindowShouldClose == false)//infinite loop
+    while (WindowShouldClose() == false)//if esc or the x icon is pressed windowshouldclose swaps to false and ends the loop
     {
         BeginDrawing();
         ClearBackground(RED);  
