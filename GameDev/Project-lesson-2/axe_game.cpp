@@ -10,6 +10,13 @@ int main()
     double cheese_burger{5.99};//double allows for non-whole numbers with more detail takes up more memory, braced initalization
     bool shouldhavelunch{};// bool can be either true or false and nothing else, Braced empty on bool is always falce
     
+    bool equal{ 4 == 9}//false
+    bool notEqual{4 != 9}//true
+    bool less{ 4 < 9}//true
+    bool greater{4 > 9}//false
+    bool lessEqual{ 4 <= 9}//true
+    bool greaterEqual[4 >= 9]//false
+
     int width;//creates an integer has to be whole number
     int hight;
     hight = 400;// defines value of integer
