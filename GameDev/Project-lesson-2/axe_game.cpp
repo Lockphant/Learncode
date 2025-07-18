@@ -16,7 +16,9 @@ int main()
 
     while (true);//infinite loop
     {
-
+        BeginDrawing();
+        ClearBackground(RED);  
+        EndDrawing();
     }
 
 }
