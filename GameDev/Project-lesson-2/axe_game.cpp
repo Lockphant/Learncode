@@ -6,16 +6,6 @@ Made by Tom Hair
 #include "raylib.h" //double quote external libaru
 int main()
 {
-    float root_beer = 1.99;// float alows for non-whole numbers, Initialization by assignment
-    double cheese_burger{5.99};//double allows for non-whole numbers with more detail takes up more memory, braced initalization
-    bool shouldhavelunch{};// bool can be either true or false and nothing else, Braced empty on bool is always falce
-    
-    bool equal{ 4 == 9}//false
-    bool notEqual{4 != 9}//true
-    bool less{ 4 < 9}//true
-    bool greater{4 > 9}//false
-    bool lessEqual{ 4 <= 9}//true
-    bool greaterEqual[4 >= 9]//false
 
     int width;//creates an integer has to be whole number
     int hight;
@@ -23,4 +13,10 @@ int main()
     width = 700;
     
     InitWindow(width,hight,"Tom's Window"); // creates window width,hight,name
+
+    while (true);//infinite loop
+    {
+
+    }
+
 }
