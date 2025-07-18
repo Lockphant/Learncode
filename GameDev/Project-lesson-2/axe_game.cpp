@@ -14,7 +14,7 @@ int main()
     
     InitWindow(width,hight,"Tom's Window"); // creates window width,hight,name
 
-    while (true);//infinite loop
+    while (WindowShouldClose == false)//infinite loop
     {
         BeginDrawing();
         ClearBackground(RED);  
