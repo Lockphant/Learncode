@@ -71,8 +71,6 @@ int main()
 
             DrawCircle(circle_x,circle_y,circle_r,BLUE);
             DrawRectangle(axe_x,axe_y,axe_length,axe_length,RED);
-            DrawRectangle(axe_x-150,axe_y,axe_length,axe_length,RED);
-            DrawRectangle(axe_x+150,axe_y,axe_length,axe_length,RED);
             //move axe
             axe_y += direction;
             if (axe_y > hight || axe_y <0) // || = or statement
