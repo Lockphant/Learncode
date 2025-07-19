@@ -33,7 +33,11 @@ int main()
     int r_axe_x{axe_x + axe_length};
 
     //
-    bool collision_with_axe{true};
+    bool collision_with_axe = 
+                            (b_axe_y >= u_circle_y) && 
+                            (u_axe_y <= b_circle_y) && 
+                            (l_axe_x <= r_circle_x) && 
+                            (r_axe_x >= l_circle_x);
 
 
     SetTargetFPS(60);
@@ -49,9 +53,26 @@ int main()
         else
         {
             // game logic begins
+            //update edges
+            l_circle_x = circle_x-circle_r;
+            r_circle_x = circle_x + circle_r;
+            u_circle_y = circle_y - circle_r;
+            b_circle_y = circle_y + circle_r;
+            u_axe_y = axe_y;
+            b_axe_y = axe_y + axe_length;
+            l_axe_x = axe_x ;
+            r_axe_x = axe_x + axe_length;
+            //update collision with axe
+            collision_with_axe = 
+                            (b_axe_y >= u_circle_y) && 
+                            (u_axe_y <= b_circle_y) && 
+                            (l_axe_x <= r_circle_x) && 
+                            (r_axe_x >= l_circle_x);
 
             DrawCircle(circle_x,circle_y,circle_r,BLUE);
             DrawRectangle(axe_x,axe_y,axe_length,axe_length,RED);
+            DrawRectangle(axe_x-150,axe_y,axe_length,axe_length,RED);
+            DrawRectangle(axe_x+150,axe_y,axe_length,axe_length,RED);
             //move axe
             axe_y += direction;
             if (axe_y > hight || axe_y <0) // || = or statement
