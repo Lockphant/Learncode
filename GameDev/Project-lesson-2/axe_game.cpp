@@ -21,6 +21,7 @@ int main()
     int axe_y{0};
     int axe_width{50};
     int axe_hight{50};
+    int direction{10};
 
     SetTargetFPS(60);
     while (WindowShouldClose() == false)//if esc or the x icon is pressed windowshouldclose swaps to false and ends the loop
@@ -33,7 +34,11 @@ int main()
         DrawCircle(circle_x,circle_y,circle_r,BLUE);
         DrawRectangle(axe_x,axe_y,axe_width,axe_hight,RED);
         //move axe
-        axe_y += 10;
+        axe_y += direction;
+        if (axe_y > 450 || axe_y <0)
+        {
+            direction = -direction;
+        }
 
         //move circle
         if (IsKeyDown(KEY_D) && circle_x < 350)
